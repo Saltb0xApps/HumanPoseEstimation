@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9CU-0Y-vts">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HumanViewController-->
+        <scene sceneID="kfC-DX-erp">
+            <objects>
+                <viewController id="9CU-0Y-vts" userLabel="HumanViewController" customClass="HumanViewController" customModule="HumanPoseEstimation_CoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mcC-Vq-6yu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rN-aG-qiz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="741"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLx-8G-3ly" customClass="HumanPoseView" customModule="HumanPoseEstimation_CoreML" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="741"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2rN-aG-qiz" firstAttribute="bottom" secondItem="PLx-8G-3ly" secondAttribute="bottom" id="OUD-xV-hma"/>
+                            <constraint firstItem="2rN-aG-qiz" firstAttribute="leading" secondItem="sDs-Q1-Yp7" secondAttribute="leading" id="Rvl-po-ScA"/>
+                            <constraint firstItem="2rN-aG-qiz" firstAttribute="trailing" secondItem="PLx-8G-3ly" secondAttribute="trailing" id="pGY-zU-lgk"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="2rN-aG-qiz" secondAttribute="bottom" constant="-7" id="sf3-vX-PXF"/>
+                            <constraint firstItem="PLx-8G-3ly" firstAttribute="leading" secondItem="2rN-aG-qiz" secondAttribute="leading" id="td5-Sj-ZEW"/>
+                            <constraint firstItem="PLx-8G-3ly" firstAttribute="top" secondItem="2rN-aG-qiz" secondAttribute="top" id="tea-wL-pgb"/>
+                            <constraint firstItem="2rN-aG-qiz" firstAttribute="top" secondItem="sDs-Q1-Yp7" secondAttribute="top" id="wFO-aE-wuF"/>
+                            <constraint firstItem="2rN-aG-qiz" firstAttribute="trailing" secondItem="sDs-Q1-Yp7" secondAttribute="trailing" id="yDi-ZH-NJJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sDs-Q1-Yp7"/>
+                    </view>
+                    <connections>
+                        <outlet property="poseView" destination="PLx-8G-3ly" id="GUs-bx-Tof"/>
+                        <outlet property="videoPreview" destination="2rN-aG-qiz" id="fqh-TA-pPD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hg5-2J-KwQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1341.5999999999999" y="-199.50738916256159"/>
+        </scene>
+    </scenes>
+</document>
